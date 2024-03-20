@@ -13,14 +13,20 @@ npm install contribution-map
 yarn add contribution-map
 ```
 
-2.  在当前项目中引入并使用 contribution-map
+2.  在项目的main.js中引入并使用 contribution-map
+```js
+// ....
+import ContributionMap from "contribution-map";
 
+app.use(ContributionMap);
+// ....
+```
+3.  使用组件
 ```vue
 <template>
     <ContributionMap :contributionData="contributionData"></ContributionMap>
 </template>
 <script setup>
-import ContributionMap from './components/map.vue';
 // Mock Data
 const contributionData = [
     {

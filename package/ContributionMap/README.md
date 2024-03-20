@@ -9,19 +9,25 @@
 1. Install the contribution map component and use other methods such as NPM or Yarn to install it:
 
 ```Bash
-npm install contribution map
+npm install contribution-map
 
-yarn add contribution map
+yarn add contribution-map
 ```
 
-2. Introduce and use contribution map in the current project
+2. Introduce and use contribution-map in the main.js of the project
+```js
+// ....
+import ContributionMap from "contribution-map";
 
+app.use(ContributionMap);
+// ....
+```
+3.  Use component
 ```Vue
 <template>
     <ContributionMap :contributionData="contributionData"></ContributionMap>
 </template>
 <script setup>
-import ContributionMap from './components/map.vue';
 // Mock Data
 const contributionData = [
     {
