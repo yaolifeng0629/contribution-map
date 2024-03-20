@@ -1,4 +1,4 @@
-import "./index.css";
+import './style.css';
 import { ref as Lt, onMounted as Ls, openBlock as te, createElementBlock as se, createElementVNode as G, Fragment as Ne, renderList as We, toDisplayString as Pe, normalizeStyle as Us, unref as Is, normalizeClass as Es, pushScopeId as Hs, popScopeId as As } from "vue";
 //! moment.js
 //! version : 2.30.1
@@ -2653,7 +2653,7 @@ const Gi = (e, t) => {
     name: "ContributionMap",
     component: Ki
   }
-], ro = {
+], so = {
   install(e) {
     eo.forEach((t) => {
       e.component(t.name, t.component);
@@ -2662,5 +2662,5 @@ const Gi = (e, t) => {
 };
 export {
   Ki as ContributionMap,
-  ro as default
+  so as default
 };

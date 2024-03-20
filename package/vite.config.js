@@ -1,15 +1,13 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import libCss from 'vite-plugin-libcss';
 export default defineConfig({
     open: true,
-    plugins: [vue(), libInjectCss()],
+    plugins: [vue(), libCss()],
     build: {
         outDir: 'ContributionMap', //输出文件名称
         lib: {
-            formats: ['es', 'cjs', 'umd'],
-            cssCodeSplit: true,
             entry: path.resolve(__dirname, './src/components/index.js'), //指定组件编译入口文件
             name: 'ContributionMap',
             fileName: 'ContributionMap',

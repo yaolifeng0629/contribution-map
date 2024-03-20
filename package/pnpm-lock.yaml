@@ -25,9 +25,9 @@ devDependencies:
   vite:
     specifier: ^5.1.6
     version: 5.1.6(less@4.2.0)
-  vite-plugin-lib-inject-css:
-    specifier: ^2.0.0
-    version: 2.0.0(vite@5.1.6)
+  vite-plugin-libcss:
+    specifier: ^1.1.1
+    version: 1.1.1(vite@5.1.6)
 
 packages:
 
@@ -452,6 +452,16 @@ packages:
   /@vue/shared@3.4.21:
     resolution: {integrity: sha512-PuJe7vDIi6VYSinuEbUIQgMIRZGgM8e4R+G+/dQTk0X1NEdvgvvgv7m+rfmDH1gZzyA1OjjoWskvHlfRNfQf3g==}
 
+  /balanced-match@1.0.2:
+    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+    dev: true
+
+  /brace-expansion@2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: true
+
   /copy-anything@2.0.6:
     resolution: {integrity: sha512-1j20GZTsvKNkc4BY3NpMOM8tt///wY3FpIzozTOFO2ffuZcV61nojHXVKIy3WM+7ADCy5FVhdZYHYDdgTU0yJw==}
     dependencies:
@@ -601,6 +611,13 @@ packages:
     dev: true
     optional: true
 
+  /minimatch@9.0.3:
+    resolution: {integrity: sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /moment@2.30.1:
     resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
     dev: false
@@ -711,13 +728,12 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
-  /vite-plugin-lib-inject-css@2.0.0(vite@5.1.6):
-    resolution: {integrity: sha512-5RK9eP2biW340FEbpI8eHZQfeqIz0+Glbkk4U1fZ1QKOvyaYy5K6TmW43KuhmGLizk2Vd4Nv7OwGpxq2wXclyQ==}
+  /vite-plugin-libcss@1.1.1(vite@5.1.6):
+    resolution: {integrity: sha512-WAk6U9iYWMbcu7cdw4wACpVebZiLHMyyE9KTcBzzkTt1cnXj3a7loIoIGNblx+xMb9quPpO3iRbNTOnIFDzgmg==}
     peerDependencies:
       vite: '*'
     dependencies:
-      magic-string: 0.30.8
-      picocolors: 1.0.0
+      minimatch: 9.0.3
       vite: 5.1.6(less@4.2.0)
     dev: true
 
