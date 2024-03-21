@@ -57,6 +57,9 @@ const init = () => {
             columns: 7,
             data: [],
         };
+        let daysInFirstMonth = 7 - firstMondayDate.day();
+        let isFirstMonth = i === 0;
+
         for (let j = 0; j < 7; j++) {
             let date = firstMondayDate.clone().add(i * 7 + j, 'days');
             let formattedDate = date.format('YYYY-MM-DD');
@@ -65,11 +68,18 @@ const init = () => {
                 number: number,
                 date: formattedDate,
             });
+
+            if (isFirstMonth && daysInFirstMonth < 14) continue;
+
             if (j > 0 && date.month() !== lastMonth) {
                 weekData.title = date.format('MMM');
             }
         }
-        lastMonth = moment(weekData.data[weekData.data.length - 1].date).month();
+
+        if (!isFirstMonth || daysInFirstMonth >= 14) {
+            lastMonth = moment(weekData.data[weekData.data.length - 1].date).month();
+        }
+
         _dateData.push(weekData);
     }
     dateData.value = _dateData;
