@@ -1,6 +1,6 @@
 {
     "name": "contribution-map",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "contribution-map is a visual component that helps us visually display the contributors and their contributions to a project. This component can generate a matrix where each cell represents the number of contributions made by a contributor during a specific time period.",
     "main": "ContributionMap.js",
     "scripts": {
